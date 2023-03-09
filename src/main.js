@@ -1,6 +1,24 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import data from './data/ghibli/ghibli.js';
+import { filtroDirector, filtroProductor, filtroEspecie, filtroGenero } from "./data.js";
 
-console.log(example, data);
+// SELECCION SECCION
+const botonHistoria = document.getElementById("botonHistoria");
+const historia = document.getElementById("historia");
+botonHistoria.addEventListener("click", function() {
+  document.getElementById("header").style.display = "none";
+  historia.style.display = "block";
+});
+
+const botonPersonajes = document.getElementById("botonPersonajes");
+const seccionPersonajes = document.getElementById("personajes");
+botonPersonajes.addEventListener("click", function() {
+  document.getElementById("header").style.display = "none";
+  seccionPersonajes.style.display = "block";
+});
+
+const botonFilmografia = document.getElementById("botonFilmografia");
+const seccionFilmografia = document.getElementById("filmografia");
+botonFilmografia.addEventListener("click", function() {
+  document.getElementById("header").style.display = "none";
+  seccionFilmografia.style.display = "block";
+});
