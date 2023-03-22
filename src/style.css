@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  /*box-sizing: border-box; Se agrega esta propiedad para incluir los bordes en el cálculo del tamaño de los elementos */
 }
 
 h1 {
@@ -36,7 +37,7 @@ h2 {
   box-sizing: border-box;
 }
 
-p {
+.textoHistoria {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
@@ -54,7 +55,119 @@ p {
   margin: 40px auto;
 }
 
-/* BUTTONS */
+.filmografia {
+  /* Contenedor de toda la sección */
+  max-width: 1425px;
+  max-height: 455px;
+}
+
+.filtrosFilmografia {
+  max-width: 1425px;
+  max-height: 50px;
+}
+
+.filtroOrden {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 130px;
+  height: 40px;
+  padding: 10px;
+  border: 3px solid #4C362E;
+  border-radius: 8px;
+  background-color: #C9B8A7;
+  font-size: 12px;
+  font-weight: bold;
+  color: #4C362E;
+  position: absolute;
+  left: 40%;
+  margin-left: -65px;
+}
+
+.filtroDirector {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 130px;
+  height: 40px;
+  padding: 10px;
+  border: 3px solid #4C362E;
+  border-radius: 8px;
+  background-color: #C9B8A7;
+  font-size: 12px;
+  font-weight: bold;
+  color: #4C362E;
+  position: absolute;
+  left: 50%;
+  margin-left: -65px;
+}
+
+.filtroProductor {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 130px;
+  height: 40px;
+  padding: 10px;
+  border: 3px solid #4C362E;
+  border-radius: 8px;
+  background-color: #C9B8A7;
+  font-size: 12px;
+  font-weight: bold;
+  color: #4C362E;
+  position: absolute;
+  left: 60%;
+  margin-left: -65px;
+}
+
+.imagenesFilmografia {
+  width: 1200px;
+  margin: 90px auto 0;
+  text-align: center;
+}
+
+.peliculas {
+  /* Contenedor imágen, título, año y descripción */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: justify;
+  background-color: #7F8462;
+  opacity: 0.8;
+  font-size: 15px;
+  border-radius: 20px;
+  border: 3px solid #C9B8A7;
+  width: 500px;
+  height: 200px;
+  padding: 20px;
+  margin: 15px;
+  display: inline-flex;
+  vertical-align: top;
+  position: relative;
+}
+
+img {
+  /* Poster */
+  max-width: 200px;
+  max-height: 200px;
+  float: left;
+  margin-right: 20px;
+}
+
+.datos {
+  /* Contenedor título, año y descripción */
+  text-align: justify;
+  align-content: center;
+}
+
+.descripcionPelicula {
+  /* Descripción */
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  color: #ffffff;
+  text-align: justify;
+  margin-top: 15px;
+  max-width: 350px;
+  max-height: 100px;
+}
+
+/* BOTONES SELECCION SECCIONES */
 button {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -73,7 +186,7 @@ button {
   justify-content: flex-end;
   margin: 10px;
   margin-left: 0;
-  /*clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);*/
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
 }
 
 button:hover {
@@ -84,28 +197,22 @@ button:first-of-type {
   margin-top: 305px;
 }
 
-#botonVolver {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  background-color: #7F8462;
-  color: #ffffff;
-  padding: 10px 20px 10px;
-  font-size: 16px;
-  border: 3px solid #C9B8A7;
+/* BOTONES VOLVER */
+#botonVolver,
+#botonVolver2,
+#botonVolver3 {
   text-align: center !important;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
   width: 110px;
-  height: 40px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
   justify-content: flex-start;
   margin: 10px;
   margin-right: 0;
   float: right;
+  clip-path: polygon(100% 0, 5% 0, 0 50%, 5% 100%, 100% 100%);
 }
 
-#botonVolver:hover {
+#botonVolver:hover,
+#botonVolver2:hover,
+#botonVolver3:hover {
   background-color: #4C362E;
 }
 

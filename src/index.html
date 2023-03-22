@@ -28,7 +28,7 @@
   <main>
     <section id="historia" class="historia"><br>
       <h2>HISTORIA</h2>
-      <p>Fundado en 1985, el estudio está dirigido por el galardonado director Hayao Miyazaki, y hasta 2018 estuvo
+      <p class="textoHistoria">Fundado en 1985, el estudio está dirigido por el galardonado director Hayao Miyazaki, y hasta 2018 estuvo
         dirigido por Miyazaki junto a su amigo y mentor, Isao Takahata, fallecido en ese año. Sus orígenes datan de
         1984, con la película Nausicäa del Valle del Viento, la cual comenzó como un manga en una publicación de la
         revista Tokuma Shoten. Tokuma era la compañía "madre" de Ghibli, y cedió a Disney los derechos de video y
@@ -71,26 +71,22 @@
     <section id="filmografia" class="filmografia">
       <h2>FILMOGRAFÍA</h2>
       <section class="filtrosFilmografia">
-        <section id="seccionFiltroDirector" class="filtro">
-          <select id="filtroDirector" class="filtroSeleccion">
-            <option value="" selected>DIRECTOR</option>
+        <select id="filtroDirector" class="filtroDirector">
+          <option value="" selected>DIRECTOR</option>
+        </select>
+        <select id="filtroProductor" class="filtroProductor">
+          <option value="" selected>PRODUCTOR</option>
+        </select>
+        <form>
+          <select id="filtroOrden" class="filtroOrden">
+            <option id="anio" value="numero"> AÑO </option>
+            <option id="ascendente" value="Ascendente"> ASCENDENTE </option>
+            <option id="descendente" value="Descendente"> DESCENDENTE </option>
           </select>
-        </section>
-        <section id="seccionFiltroProductor" class="filtro">
-          <select id="filtroProductor" class="filtroSeleccion">
-            <option value="" selected>PRODUCTOR</option>
-          </select>
-        </section>
-        <section id="seccionOrden" class="filtro">
-          <select id="filtroOrden" class="filtroSeleccion">
-            <option value="Anio" selected>AÑO</option>
-            <option value="Ascendente" selected>ASCENDENTE</option>
-            <option value="Descendente" selected>DESCENDENTE</option>
-          </select>
-        </section>
-        <section id="grillaFilmografia" class="imagenesFilmografia"></section>
+        </form>
       </section>
-      <button id="botonVolver">VOLVER</button>
+      <section id="grillaFilmografia" class="imagenesFilmografia"></section>
+      <button id="botonVolver2">VOLVER</button>
     </section>
 
     <section id="personajes" class="personajes">
@@ -100,7 +96,7 @@
       </section>
       <section id="numeroEspecies"></section>
       <section id="grillaPersonajes" class="imagenesPersonajes"></section>
-      <button id="botonVolver">VOLVER</button>
+      <button id="botonVolver3">VOLVER</button>
     </section>
   </main>
   <script src="main.js" type="module"></script>
