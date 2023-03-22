@@ -1,3 +1,4 @@
+/* global Set */
 import data from "./data/ghibli/ghibli.js";
 import { filtroInformacionDirector, filtroInformacionProductor, filtroInformacionEspecie, ordenInformación, calculoInformacion } from './data.js';
 
@@ -21,29 +22,50 @@ botonFilmografia.addEventListener("click", function () {
   seccionFilmografia.style.display = "block";
 });
 
+// VOLVER AL HOME
+const volver = document.getElementById("botonVolver");
+function volverInicio() {
+  window.location.reload();
+}
+volver.addEventListener("click", volverInicio);
+
+const volver2 = document.getElementById("botonVolver2");
+function volverInicio2() {
+  window.location.reload();
+}
+volver2.addEventListener("click", volverInicio2);
+
+const volver3 = document.getElementById("botonVolver3");
+function volverInicio3() {
+  window.location.reload();
+}
+volver3.addEventListener("click", volverInicio3);
+
 // FILMOGRAFIA
 const matrizFilmografia = document.querySelector("#grillaFilmografia");
 const films = data.films;
 for (let i = 0; i < films.length; i++) {
   const listaFilmografia = `
-  <div class="datosPelicula">
-  <a href="#"><img src="${films[i].poster}" alt=""></a>
-  <div class="tituloPelicula"><label><b>${films[i].title}</b></label></div>
-  <div class="fechaPelicula"><label><b>(${films[i].release_date})</b></label></div>
-  <div class="descripcionPelicula"><label><b>${films[i].description}</b></label></div>
-  </div>`;
+  <div class="peliculas">
+      <a href="#"><img src="${films[i].poster}" alt=""></a>
+    <div class="datos">
+      <h3 class="tituloPelicula"><label><b>${films[i].title}</b></label></h3>
+      <time class="fechaPelicula"><label>(${films[i].release_date})</label></time>
+      <p class="descripcionPelicula"><label>${films[i].description}</label></p>
+    </div>`;
   matrizFilmografia.insertAdjacentHTML("beforeend", listaFilmografia);
 }
 export function nuevaListaFilmografia(films) {
   matrizFilmografia.innerHTML = "";
   for (let i = 0; i < films.length; i++) {
     const listadoFilmografia = `
-    <div class="datosPelicula">
-    <a href="#"><img src="${films[i].poster}" alt=""></a>
-    <div class="tituloPelicula"><label><b>${films[i].title}</b></label></div>
-    <div class="fechaPelicula"><label><b>(${films[i].release_date})</b></label></div>
-    <div class="descripcionPelicula"><label><b>${films[i].description}</b></label></div>
-    </div>`;
+    <div class="peliculas">
+      <a href="#"><img src="${films[i].poster}" alt=""></a>
+    <div class="datos">
+      <h3 class="tituloPelicula"><label><b>${films[i].title}</b></label></h3>
+      <time class="fechaPelicula"><label>(${films[i].release_date})</label></time>
+      <p class="descripcionPelicula"><label>${films[i].description}</label></p>
+  </div>`;
     matrizFilmografia.insertAdjacentHTML("beforeend", listadoFilmografia);
   }
 }
