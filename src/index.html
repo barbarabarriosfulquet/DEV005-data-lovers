@@ -20,6 +20,7 @@
 <body>
   <header id="header">
     <h1>スタジオジブリ<br>STUDIO GHIBLI</h1>
+    <!-- <div lang="zn">ALGO EN CHINO</div> -->
     <button id="botonHistoria">HISTORIA</button>
     <button id="botonFilmografia">FILMOGRAFÍA</button>
     <button id="botonPersonajes">PERSONAJES</button>
@@ -79,7 +80,7 @@
         </select>
         <form>
           <select id="filtroOrden" class="filtroOrden">
-            <option id="anio" value="numero"> AÑO </option>
+            <option id="anio" value="numero">AÑO</option>
             <option id="ascendente" value="Ascendente"> ASCENDENTE </option>
             <option id="descendente" value="Descendente"> DESCENDENTE </option>
           </select>
@@ -92,7 +93,9 @@
     <section id="personajes" class="personajes">
       <h2>PERSONAJES</h2>
       <section class="filtroPersonajes">
-        <select id="filtroEspecie" class="filtroSeleccion"></select>
+        <select id="filtroEspecie" class="filtroEspecie">
+          <option value="" selected>ESPECIE</option>
+        </select>
       </section>
       <section id="numeroEspecies"></section>
       <section id="grillaPersonajes" class="imagenesPersonajes"></section>

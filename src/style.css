@@ -45,7 +45,7 @@ h2 {
   text-align: justify;
   margin: 50px;
   background-color: #7F8462;
-  opacity: 0.8;
+  opacity: 1;
   font-size: 15px;
   border-radius: 20px;
   border: 3px solid #C9B8A7;
@@ -55,18 +55,23 @@ h2 {
   margin: 40px auto;
 }
 
-.filmografia {
+.filmografia,
+.personajes {
   /* Contenedor de toda la sección */
   max-width: 1425px;
   max-height: 455px;
 }
 
-.filtrosFilmografia {
+.filtrosFilmografia,
+.filtroPersonajes {
   max-width: 1425px;
   max-height: 50px;
 }
 
-.filtroOrden {
+.filtroDirector,
+.filtroProductor,
+.filtroOrden,
+.filtroEspecie {
   font-family: Arial, Helvetica, sans-serif;
   width: 130px;
   height: 40px;
@@ -78,40 +83,20 @@ h2 {
   font-weight: bold;
   color: #4C362E;
   position: absolute;
-  left: 40%;
   margin-left: -65px;
 }
 
-.filtroDirector {
-  font-family: Arial, Helvetica, sans-serif;
-  width: 130px;
-  height: 40px;
-  padding: 10px;
-  border: 3px solid #4C362E;
-  border-radius: 8px;
-  background-color: #C9B8A7;
-  font-size: 12px;
-  font-weight: bold;
-  color: #4C362E;
-  position: absolute;
+.filtroDirector,
+.filtroEspecie {
   left: 50%;
-  margin-left: -65px;
 }
 
 .filtroProductor {
-  font-family: Arial, Helvetica, sans-serif;
-  width: 130px;
-  height: 40px;
-  padding: 10px;
-  border: 3px solid #4C362E;
-  border-radius: 8px;
-  background-color: #C9B8A7;
-  font-size: 12px;
-  font-weight: bold;
-  color: #4C362E;
-  position: absolute;
   left: 60%;
-  margin-left: -65px;
+}
+
+.filtroOrden {
+  left: 40%;
 }
 
 .imagenesFilmografia {
@@ -119,6 +104,12 @@ h2 {
   margin: 90px auto 0;
   text-align: center;
 }
+.imagenesPersonajes {
+  width: 1400px;
+  margin: 90px auto 0;
+  text-align: center;
+}
+
 
 .peliculas {
   /* Contenedor imágen, título, año y descripción */
@@ -128,7 +119,7 @@ h2 {
   color: #ffffff;
   text-align: justify;
   background-color: #7F8462;
-  opacity: 0.8;
+  opacity: 1;
   font-size: 15px;
   border-radius: 20px;
   border: 3px solid #C9B8A7;
@@ -141,21 +132,45 @@ h2 {
   position: relative;
 }
 
-img {
-  /* Poster */
+.posterPelicula {
   max-width: 200px;
   max-height: 200px;
   float: left;
   margin-right: 20px;
 }
 
-.datos {
-  /* Contenedor título, año y descripción */
+.personaje {
+  /* Contenedor imágen, género, edad y especie */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
   text-align: justify;
-  align-content: center;
+  background-color: #7F8462;
+  opacity: 1;
+  font-size: 15px;
+  border-radius: 20px;
+  border: 3px solid #C9B8A7;
+  width: 150px;
+  height: auto;
+  padding: 20px;
+  margin: 15px;
+  display: inline-flex;
+  vertical-align: top;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
 }
 
-.descripcionPelicula {
+.posterPersonaje {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  float: left;
+}
+
+.descripcionPelicula,
+.datosPersonaje {
   /* Descripción */
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
@@ -165,6 +180,11 @@ img {
   margin-top: 15px;
   max-width: 350px;
   max-height: 100px;
+}
+
+/* BULLET */
+ul {
+  list-style: none;
 }
 
 /* BOTONES SELECCION SECCIONES */
@@ -190,7 +210,7 @@ button {
 }
 
 button:hover {
-  background-color: #4C362E;
+  background-color: rgb(76, 54, 46);
 }
 
 button:first-of-type {

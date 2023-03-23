@@ -52,5 +52,7 @@ export const calculoInformacion = (data, especie) => {
       }
     }
   }
-  return calculoEspecie;
+  const cantPersonajes = 171;
+  const calculo =  "%" + Math.round((calculoEspecie /= cantPersonajes) * 100);
+  return calculo;
 };
