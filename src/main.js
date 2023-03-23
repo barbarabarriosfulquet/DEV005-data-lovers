@@ -45,27 +45,33 @@ volver3.addEventListener("click", volverInicio3);
 const matrizFilmografia = document.querySelector("#grillaFilmografia");
 const films = data.films;
 for (let i = 0; i < films.length; i++) {
-  const listaFilmografia = `
+  const listaFilmografia = `  
   <div class="peliculas">
-      <a href="#"><img src="${films[i].poster}" alt=""></a>
-    <div class="datos">
-      <h3 class="tituloPelicula"><label><b>${films[i].title}</b></label></h3>
-      <time class="fechaPelicula"><label>(${films[i].release_date})</label></time>
-      <p class="descripcionPelicula"><label>${films[i].description}</label></p>
-    </div>`;
+    <a href="#">
+      <img src="${films[i].poster}" alt="" class="posterPelicula">
+    </a>
+    <div class="datosPeliculas">
+      <h3 class="tituloPelicula">${films[i].title}</h3>
+      <time class="fechaPelicula">(${films[i].release_date})</time>
+      <p class="descripcionPelicula">${films[i].description}</p>
+    </div>
+  </div>`;
   matrizFilmografia.insertAdjacentHTML("beforeend", listaFilmografia);
 }
 export function nuevaListaFilmografia(films) {
   matrizFilmografia.innerHTML = "";
   for (let i = 0; i < films.length; i++) {
-    const listadoFilmografia = `
+    const listadoFilmografia = `  
     <div class="peliculas">
-      <a href="#"><img src="${films[i].poster}" alt=""></a>
-    <div class="datos">
-      <h3 class="tituloPelicula"><label><b>${films[i].title}</b></label></h3>
-      <time class="fechaPelicula"><label>(${films[i].release_date})</label></time>
-      <p class="descripcionPelicula"><label>${films[i].description}</label></p>
-  </div>`;
+      <a href="#">
+        <img src="${films[i].poster}" alt="" class="posterPelicula">
+      </a>
+      <div class="datosPeliculas">
+        <h3 class="tituloPelicula">${films[i].title}</h3>
+        <time class="fechaPelicula">(${films[i].release_date})</time>
+        <p class="descripcionPelicula">${films[i].description}</p>
+      </div>
+    </div>`;
     matrizFilmografia.insertAdjacentHTML("beforeend", listadoFilmografia);
   }
 }
@@ -125,12 +131,18 @@ for (let i = 0; i < data.films.length; i++) {
 const matrizPersonajes = document.querySelector("#grillaPersonajes");
 for (let i = 0; i < listaPersonajes.length; i++) {
   const listaFilmografia = `
-  <div class="datosPelicula">
-  <a href="#"><img src="${listaPersonajes[i].img}" alt=""></a>
-  <div class="tituloPelicula"><label><b>${listaPersonajes[i].name}</b></label></div>
-  <div class="genero"><label><b>Género: ${listaPersonajes[i].gender}</b></label></div>
-  <div class="edad"><label><b>Edad: ${listaPersonajes[i].age} años</b></label></div>
-  <div class="especie"><label><b>Especie: ${listaPersonajes[i].specie}</b></label></div>
+  <div class="personaje">
+    <a href="#">
+      <img src="${listaPersonajes[i].img}" alt="" class="posterPersonaje">
+    </a>
+    <div class="datosPersonaje">
+      <h3 class="nombrePersonaje">${listaPersonajes[i].name.toUpperCase()}</h3>
+      <ul class="infoPersonaje">
+        <li><b>Género:</b> ${listaPersonajes[i].gender === 'Male' ? 'Masculino' : 'Femenino'}</li>
+        <li><b>Edad:</b> ${listaPersonajes[i].age} años</li>
+        <li><b>Especie:</b> ${listaPersonajes[i].specie}</li>
+      </ul>
+    </div>
   </div>`;
   matrizPersonajes.insertAdjacentHTML("beforeend", listaFilmografia);
 }
@@ -139,12 +151,18 @@ function personajes(listaPersonajes) {
   matrizPersonajes.innerHTML = "";
   for (let i = 0; i < listaPersonajes.length; i++) {
     const listadoFilmografia = `
-    <div class="datosPelicula">
-    <a href="#"><img src="${listaPersonajes[i].img}" alt=""></a>
-    <div class="tituloPelicula"><label><b>${listaPersonajes[i].name}</b></label></div>
-    <div class="genero"><label><b>Género: ${listaPersonajes[i].gender}</b></label></div>
-    <div class="edad"><label><b>Edad: ${listaPersonajes[i].age} años</b></label></div>
-    <div class="especie"><label><b>Especie: ${listaPersonajes[i].specie}</b></label></div>
+    <div class="personaje">
+      <a href="#">
+        <img src="${listaPersonajes[i].img}" alt="">
+      </a>
+      <div class="datosPersonaje">
+        <h3 class="nombrePersonaje">${listaPersonajes[i].name.toUpperCase()}</h3>
+        <ul class="infoPersonaje">
+          <li><b>Género:</b> ${listaPersonajes[i].gender === 'Male' ? 'Masculino' : 'Femenino'}</li>
+          <li><b>Edad:</b> ${listaPersonajes[i].age} años</li>
+          <li><b>Especie:</b> ${listaPersonajes[i].specie}</li>
+        </ul>
+      </div>
     </div>`;
     matrizPersonajes.insertAdjacentHTML("beforeend", listadoFilmografia);
   }
