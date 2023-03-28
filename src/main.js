@@ -1,6 +1,6 @@
 /* global Set */
 import data from "./data/ghibli/ghibli.js";
-import { filtroInformacionDirector, filtroInformacionProductor, filtroInformacionEspecie, ordenInformación, calculoInformacion } from './data.js';
+import { filtroInformacionDirector, filtroInformacionProductor, filtroInformacionEspecie, ordenInformacion, calculoInformacion } from './data.js';
 
 // SELECCION SECCION
 const botonHistoria = document.getElementById("botonHistoria");
@@ -117,7 +117,7 @@ productores.addEventListener('change', (e) => {
 // FILMOGRAFIA - Ordenamiento
 const orden = document.getElementById("filtroOrden");
 orden.addEventListener('change', (e) => {
-  const ordenSeleccionado = ordenInformación(e.target.value, films);
+  const ordenSeleccionado = ordenInformacion(e.target.value, films);
   nuevaListaFilmografia(ordenSeleccionado);
 })
 
