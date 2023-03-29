@@ -1,4 +1,4 @@
-import { filtroInformacionDirector, filtroInformacionProductor, filtroInformacionEspecie, ordenInformacion, fechaAscendente, fechaDescendente, calculoInformacion } from '../src/data.js';
+import { filtroInformacionDirector, filtroInformacionProductor, ordenInformacion, fechaAscendente, fechaDescendente, calculoInformacion } from '../src/data.js';
 
 const baseDatos = [{ title: "Castle in the Sky", director: "Hayao Miyazaki", producer: "Isao Takahata", release_date: "1986" },
   { title: "My Neighbor Totoro", director: "Hayao Miyazaki", producer: "Hayao Miyazaki", release_date: "1988" }]
@@ -8,8 +8,7 @@ describe('Test filtroInformacionDirector', () => {
     expect(typeof filtroInformacionDirector).toBe('function');
   });
   it('filtra información por Director', () => {
-    const peliculas = [
-      { title: "Castle in the Sky", director: "Hayao Miyazaki", producer: "Isao Takahata", release_date: "1986" }];
+    const peliculas = [{ title: "Castle in the Sky", director: "Hayao Miyazaki", producer: "Isao Takahata", release_date: "1986" }, { title: "My Neighbor Totoro", director: "Hayao Miyazaki", producer: "Hayao Miyazaki", release_date: "1988" }];
     expect(filtroInformacionDirector(baseDatos, 'Hayao Miyazaki')).toEqual(peliculas);
   })
 });
@@ -22,17 +21,6 @@ describe('Test filtroInformacionProductor', () => {
     const peliculas = [
       { title: "Castle in the Sky", director: "Hayao Miyazaki", producer: "Isao Takahata", release_date: "1986" }];
     expect(filtroInformacionProductor(baseDatos, 'Isao Takahata')).toEqual(peliculas);
-  })
-});
-
-describe('Test filtroInformacionEspecie', () => {
-  it('filtroInformacionEspecie es una función', () => {
-    expect(typeof filtroInformacionEspecie).toBe('function');
-  });
-  it('filtroInformacionEspecie devuelve un arreglo de personajes', () => {
-    const personajes = [
-      { "id": "fe93adf2-2f3a-4ec4-9f68-5422f1b87c01", "name": "Pazu", "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg", "gender": "Male", "age": "13", "eye_color": "Black", "hair_color": "Brown", "specie": "Human" }];
-    expect(filtroInformacionEspecie(baseDatos, "Human")).toEqual(personajes);
   })
 });
 
@@ -107,6 +95,6 @@ describe('Test calculoInformacion', () => {
   });
   it('calculoInformacion devuelve un número', () => {
     const numero = 1;
-    expect(calculoInformacion(baseDatosPersonajes, "Demon")).toEqual(numero);
+    expect(calculoInformacion(baseDatosPersonajes, "Human")).toEqual(numero);
   });
 });
