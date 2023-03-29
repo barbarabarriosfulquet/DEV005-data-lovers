@@ -7,7 +7,8 @@
 <span style="font-weight: normal;">[3. Historias de usuarix](#3-historias-de-usuarix)</span><br>
 <span style="font-weight: normal;">[4. Prototipados](#4-prototipados)</span><br>
 <span style="font-weight: normal;">[5. Diseño](#5-diseño)</span><br>
-<span style="font-weight: normal;">[6. Links](#6-links)</span>
+<span style="font-weight: normal;">[6. Tests](#6-)</span><br>
+<span style="font-weight: normal;">[7. Links](#7-links)</span>
 
 ***
 
@@ -95,4 +96,16 @@ Criterios de aceptación: Lx usuarix debe poder filtrar y ver los personajes de 
 
 ***
 
-## <strong>6. LINKS
+## <strong>6. TESTS
+
+![Tests - Error cálculo porcentaje (1)](src/images/Tests%20-%20Error%20c%C3%A1lculo%20porcentaje%20(1).png)
+![Tests - Error cálculo porcentaje (2)](src/images/Tests%20-%20Error%20c%C3%A1lculo%20porcentaje%20(2).png)
+![Tests - Error cálculo porcentaje (3)](src/images/Tests%20-%20Error%20c%C3%A1lculo%20porcentaje%20(3).png)
+![Tests - Error cálculo porcentaje (4)](src/images/Tests%20-%20Error%20c%C3%A1lculo%20porcentaje%20(4).png)
+
+![Tests - Error filtroInformacionEspecie (1)](src/images/Tests%20-%20Error%20filtroInformacionEspecie%20(1).png)
+![Tests - Cobertura sin test filtroInformacionEspecie](src/images/Tests%20-%20Cobertura%20sin%20test%20filtroInformacionEspecie.png)
+
+***
+
+## <strong>7. LINKS
