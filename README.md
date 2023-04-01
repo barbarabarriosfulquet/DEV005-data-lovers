@@ -112,4 +112,4 @@ Criterios de aceptación: Lx usuarix debe poder filtrar y ver los personajes de 
 
 ![Repositorio Francis Carrasco](https://github.com/FrancisCG97/DEV005-data-lovers)
 ![Repositorio Bárbara Barrios Fulquet](https://github.com/barbarabarriosfulquet/DEV005-data-lovers)
-![Página Data Ghibli Lovers]()
+![Página Data Ghibli Lovers](https://barbarabarriosfulquet.github.io/DEV005-data-lovers/src/)
