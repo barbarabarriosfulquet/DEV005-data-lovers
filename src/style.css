@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /*box-sizing: border-box; Se agrega esta propiedad para incluir los bordes en el cálculo del tamaño de los elementos */
 }
 
 h1 {
@@ -33,8 +32,17 @@ h2 {
   justify-content: flex-end;
   margin: 40px;
   margin-left: 0;
-  /*clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);*/
   box-sizing: border-box;
+}
+
+body {
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+img {
+  border-radius: 15px
 }
 
 .textoHistoria {
@@ -43,7 +51,7 @@ h2 {
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
   color: #ffffff;
   text-align: justify;
-  margin: 50px;
+  margin: 40px auto;
   background-color: #7F8462;
   opacity: 1;
   font-size: 15px;
@@ -52,12 +60,13 @@ h2 {
   width: 1000px;
   height: 410px;
   padding: 40px;
-  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .filmografia,
 .personajes {
-  /* Contenedor de toda la sección */
   max-width: 1425px;
   max-height: 455px;
 }
@@ -104,12 +113,16 @@ h2 {
   margin: 90px auto 0;
   text-align: center;
 }
-.imagenesPersonajes {
+
+#grillaPersonajes {
   width: 1400px;
   margin: 90px auto 0;
   text-align: center;
 }
 
+#grillaPersonajes.filtrado {
+  margin: 0px auto 0;
+}
 
 .peliculas {
   /* Contenedor imágen, título, año y descripción */
@@ -148,7 +161,7 @@ h2 {
   text-align: justify;
   background-color: #7F8462;
   opacity: 1;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 20px;
   border: 3px solid #C9B8A7;
   width: 150px;
@@ -163,10 +176,10 @@ h2 {
 }
 
 .posterPersonaje {
-  max-width: 200px;
-  max-height: 200px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  float: left;
+  object-position: center;
 }
 
 .descripcionPelicula,
@@ -180,6 +193,17 @@ h2 {
   margin-top: 15px;
   max-width: 350px;
   max-height: 100px;
+}
+
+.calculoEspecies {
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 90px;
+  max-width: auto;
+  max-height: auto;
 }
 
 /* BULLET */
@@ -222,7 +246,9 @@ button:first-of-type {
 #botonVolver2,
 #botonVolver3 {
   text-align: center !important;
-  width: 110px;
+  font-size: 14px;
+  width: 100px;
+  height: 30px;
   justify-content: flex-start;
   margin: 10px;
   margin-right: 0;
@@ -251,4 +277,199 @@ button:first-of-type {
 
 #personajes {
   display: none;
+}
+
+/* RESPONSIVE TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    left: 58%;
+    font-size: 40px;
+  }
+
+  body {
+    background-image: url(images/background\ -\ tablet\ \(768x1024\).png);
+  }
+
+  .textoHistoria {
+    width: 550px;
+    height: 700px;
+    padding: 30px;
+  }
+
+  .filmografia,
+  .personajes {
+    max-width: 768px;
+  }
+
+  .filtrosFilmografia,
+  .filtroPersonajes {
+    max-width: 768px;
+  }
+
+  .filtroProductor {
+    left: 70%;
+  }
+
+  .filtroOrden {
+    left: 30%;
+  }
+
+  .imagenesFilmografia {
+    width: 768px;
+  }
+
+  #grillaPersonajes {
+    width: 768px;
+  }
+
+  .personaje {
+    /* Contenedor imágen, género, edad y especie */
+    font-size: 13px;
+    width: 170px;
+  }
+
+  .descripcionPelicula,
+  .datosPersonaje {
+    max-width: 500px;
+    max-height: 200px;
+  }
+
+  /* BOTONES SELECCION SECCIONES */
+  button:first-of-type {
+    margin-top: 450px;
+  }
+}
+
+/* RESPONSIVE SMARTPHONE */
+@media screen and (min-width: 375px) and (max-width: 667px) {
+  h1 {
+    top: 40%;
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 12px;
+    width: 120px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  body {
+    background-image: url(images/background\ -\ smartphone\ \(375x667\).png);
+  }
+
+  .textoHistoria {
+    margin: 15px auto;
+    font-size: 10px;
+    width: 320px;
+    height: 490px;
+    padding: 15px;
+  }
+
+  .filmografia,
+  .personajes {
+    max-width: 375px;
+  }
+
+  .filtrosFilmografia,
+  .filtroPersonajes {
+    max-width: 375px;
+  }
+
+  .filtroDirector,
+  .filtroProductor,
+  .filtroOrden,
+  .filtroEspecie {
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    font-size: 8px;
+    margin-left: -50px;
+    margin-top: 10px;
+  }
+
+  .filtroProductor {
+    left: 80%;
+  }
+
+  .filtroOrden {
+    left: 20%;
+  }
+
+  .imagenesFilmografia {
+    width: 375px;
+    margin: 50px auto 0;
+  }
+
+  #grillaPersonajes {
+    width: 375px;
+    margin: 50px auto 0;
+  }
+
+  .peliculas {
+    /* Contenedor imágen, título, año y descripción */
+    font-size: 11px;
+    width: 320px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    overflow: auto;
+  }
+
+  .posterPelicula {
+    max-width: 150px;
+    max-height: 150px;
+    margin-right: 10px;
+  }
+
+  .personaje {
+    /* Contenedor imágen, género, edad y especie */
+    font-size: 10px;
+    width: 130px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .nombrePersonaje{
+    font-size: 11px;
+  }
+
+  .posterPersonaje {
+    width: 100px;
+    height: 100px;
+  }
+
+  .descripcionPelicula,
+  .datosPersonaje {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  .calculoEspecies {
+    font-size: 10px;
+    margin-top: 55px;
+  }
+
+  /* BOTONES SELECCION SECCIONES */
+  button {
+    font-size: 12px;
+    text-align: center !important;
+    width: 375px;
+    height: 30px;
+    justify-content: center;
+  }
+
+  button:first-of-type {
+    margin-top: 325px;
+  }
+
+  /* BOTONES VOLVER */
+  #botonVolver,
+  #botonVolver2,
+  #botonVolver3 {
+    font-size: 8px;
+    width: 70px;
+    height: 20px;
+  }
 }

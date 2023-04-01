@@ -139,7 +139,7 @@ for (let i = 0; i < listaPersonajes.length; i++) {
       <h3 class="nombrePersonaje">${listaPersonajes[i].name.toUpperCase()}</h3>
       <ul class="infoPersonaje">
         <li><b>Género:</b> ${listaPersonajes[i].gender === 'Male' ? 'Masculino' : 'Femenino'}</li>
-        <li><b>Edad:</b> ${listaPersonajes[i].age} años</li>
+        <li><b>Edad:</b> ${listaPersonajes[i].age}</li>
         <li><b>Especie:</b> ${listaPersonajes[i].specie}</li>
       </ul>
     </div>
@@ -153,13 +153,13 @@ function personajes(listaPersonajes) {
     const listadoFilmografia = `
     <div class="personaje">
       <a href="#">
-        <img src="${listaPersonajes[i].img}" alt="">
+        <img src="${listaPersonajes[i].img}" alt="" class="posterPersonaje">
       </a>
       <div class="datosPersonaje">
         <h3 class="nombrePersonaje">${listaPersonajes[i].name.toUpperCase()}</h3>
         <ul class="infoPersonaje">
           <li><b>Género:</b> ${listaPersonajes[i].gender === 'Male' ? 'Masculino' : 'Femenino'}</li>
-          <li><b>Edad:</b> ${listaPersonajes[i].age} años</li>
+          <li><b>Edad:</b> ${listaPersonajes[i].age}</li>
           <li><b>Especie:</b> ${listaPersonajes[i].specie}</li>
         </ul>
       </div>
@@ -177,7 +177,7 @@ listaPersonajes.forEach(x => {
 const limpiarPersonajes = [...c];
 for (let i = 0; i < limpiarPersonajes.length; i++) {
   const listaFilmografia = `
-<option value="${limpiarPersonajes[i]}">${limpiarPersonajes[i]}</option>`;
+  <option value="${limpiarPersonajes[i]}">${limpiarPersonajes[i]}</option>`;
   especiePersonajes.insertAdjacentHTML("beforeend", listaFilmografia);
 }
 
@@ -185,8 +185,9 @@ for (let i = 0; i < limpiarPersonajes.length; i++) {
 especiePersonajes.addEventListener('change', (e) => {
   const especieSeleccionada = filtroInformacionEspecie(listaPersonajes, e.target.value);
   const cantidadEspecie = calculoInformacion(data.films, e.target.value);
-  const mensajeCantidadEspecie = `<div><label>La cantidad de personajes de ésta especie es: ${cantidadEspecie}</label></div>`;
+  const mensajeCantidadEspecie = `<div class="calculoEspecies"><label>El porcentaje de personajes de ésta especie es: %${cantidadEspecie}</label></div>`;
   const resultadoCantidadEspecie = document.getElementById("numeroEspecies");
   resultadoCantidadEspecie.innerHTML = mensajeCantidadEspecie;
   personajes(especieSeleccionada);
+  matrizPersonajes.classList.add("filtrado");
 })

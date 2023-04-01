@@ -7,7 +7,7 @@
 <span style="font-weight: normal;">[3. Historias de usuarix](#3-historias-de-usuarix)</span><br>
 <span style="font-weight: normal;">[4. Prototipados](#4-prototipados)</span><br>
 <span style="font-weight: normal;">[5. Diseño](#5-diseño)</span><br>
-<span style="font-weight: normal;">[6. Tests](#6-)</span><br>
+<span style="font-weight: normal;">[6. Tests](#6-tests)</span><br>
 <span style="font-weight: normal;">[7. Links](#7-links)</span>
 
 ***
@@ -109,3 +109,7 @@ Criterios de aceptación: Lx usuarix debe poder filtrar y ver los personajes de 
 ***
 
 ## <strong>7. LINKS
+
+![Repositorio Francis Carrasco](https://github.com/FrancisCG97/DEV005-data-lovers)
+![Repositorio Bárbara Barrios Fulquet](https://github.com/barbarabarriosfulquet/DEV005-data-lovers)
+![Página Data Ghibli Lovers]()
